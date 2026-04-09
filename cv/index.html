@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Shivam Sharma</title>
     <link rel="stylesheet" href="../style.css">
   </head>
@@ -10,25 +11,56 @@
       <a href="../">Home</a>
       <a href="../projects/">Projects</a>
       <a href="../contact/">Contact</a>
-      <a href="../cv/">CV</a>
+      <a href="../cv/" class="current">CV</a>
       <a href="https://github.com/shivamsharma0608" target="_blank">GitHub</a>
     </nav>
 
     <h1>Shivam Sharma</h1>
-    <p>Data Science Student at UC San Diego</p>
-
-    <a href="Shivam Sharma Tech Resume.pdf" target="_blank">Download my resume (PDF)</a>
-
+    <p class="cv-subtitle">Data Science Student @ UC San Diego</p>
+    <p class="cv-contact">
+      <a href="mailto:shivamsharma0608@gmail.com">shivamsharma0608@gmail.com</a> ·
+      <a href="https://linkedin.com/in/shivamsharma0608" target="_blank">LinkedIn</a> ·
+      <a href="https://github.com/shivamsharma0608" target="_blank">GitHub</a> ·
+      <a href="Shivam Sharma Tech Resume.pdf" target="_blank">Download PDF</a>
+    </p>
 
     <section>
       <h2>Education</h2>
       <article>
         <header>
-          <h3>UC San Diego</h3>
-          <p>B.S. Data Science, Minor in Mathematics</p>
+          <div>
+            <h3>UC San Diego</h3>
+            <p>B.S. Data Science, Minor in Mathematics</p>
+          </div>
+          <div class="cv-meta">
+            <span>La Jolla, CA</span>
+            <time>Sep. 2024 – June 2027</time>
+          </div>
         </header>
-        <p><time datetime="2024">2024</time> – <time datetime="2027">2027</time></p>
+        <p><strong>Relevant Courses:</strong> Principles of Data Science, Data Structures, Theoretical Foundations of Data Science, Linear Algebra, Calculus 1–3, Micro/Macro Econ, Econometrics</p>
       </article>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills-grid">
+        <div>
+          <dt>Languages</dt>
+          <dd>Python, Java, JavaScript, SQL, Excel, R, MatLab</dd>
+        </div>
+        <div>
+          <dt>Developer Tools</dt>
+          <dd>Git, VS Code, Visual Studio, IntelliJ, Eclipse, Jupyter</dd>
+        </div>
+        <div>
+          <dt>Frameworks</dt>
+          <dd>Node.js, Flask, PyTorch, TensorFlow, Tableau, Keras, XGBoost</dd>
+        </div>
+        <div>
+          <dt>Libraries</dt>
+          <dd>pandas, NumPy, Matplotlib, Seaborn, Scikit-learn</dd>
+        </div>
+      </dl>
     </section>
 
     <section>
@@ -36,61 +68,134 @@
 
       <article>
         <header>
-          <h3>Data Analyst Specialist</h3>
-          <p>Associated Students @ UCSD</p>
+          <div>
+            <h3>Data Analyst Specialist</h3>
+            <p>Associated Students @ UCSD</p>
+          </div>
+          <div class="cv-meta">
+            <span>La Jolla, CA</span>
+            <time>Jan. 2026 – Present</time>
+          </div>
         </header>
-        <p><time datetime="2024">2024</time> – Present</p>
         <ul>
-            <li>Engineered a Natural Language Processing pipeline using Python/PyTorch to analyze student feedback</li>
-            <li>Architected SQL queries to normalize datasets, optimizing data quality for machine learning workflows</li>
-            <li>Applied clustering algorithms via Scikit-learn to categorize demographics and uncover hidden correlations</li>
-            <li>Developed dynamic statistical visualizations using Matplotlib and Seaborn to drive administrative insights</li>
+          <li>Engineered a Natural Language Processing pipeline using Python/PyTorch to analyze student feedback</li>
+          <li>Architected SQL queries to normalize datasets, optimizing data quality for machine learning workflows</li>
+          <li>Applied clustering algorithms via Scikit-learn to categorize demographics and uncover hidden correlations</li>
+          <li>Developed dynamic statistical visualizations using Matplotlib and Seaborn to drive administrative insights</li>
         </ul>
       </article>
 
       <article>
         <header>
-          <h3>Research Analyst</h3>
-          <p>Eclipse Analytics</p>
+          <div>
+            <h3>Research Analyst / Journalist</h3>
+            <p>Eclipse Analytics</p>
+          </div>
+          <div class="cv-meta">
+            <span>La Jolla, CA</span>
+            <time>March 2025 – April 2026</time>
+          </div>
         </header>
-        <p><time datetime="2023">2023</time> – <time datetime="2024">2024</time></p>
         <ul>
-            <li>Pursuing a transition to ML models by using Python models to validate sports narratives and analytical ”takes”</li>
-            <li>Orchestrated Java/Python pipelines to transform raw stats into predictive growth analysis and visualizations</li>
-            <li>Published 10+ articles with 50+ visualizations, now integrating model-driven insights to substantiate claims</li>
-            <li>Leveraged feedback from 50+ UCSD athletes to refine model features and relate results back to reality</li>
+          <li>Pursuing a transition to ML models by using Python models to validate sports narratives and analytical "takes"</li>
+          <li>Orchestrated Java/Python pipelines to transform raw stats into predictive growth analysis and visualizations</li>
+          <li>Published 10+ articles with 50+ visualizations, now integrating model-driven insights to substantiate claims</li>
+          <li>Leveraged feedback from 50+ UCSD athletes to refine model features and relate results back to reality</li>
         </ul>
       </article>
 
       <article>
         <header>
-          <h3>Data Analyst Intern</h3>
-          <p>ZIZO Tech</p>
+          <div>
+            <h3>Business / Data Analyst Intern</h3>
+            <p>ZIZO Tech</p>
+          </div>
+          <div class="cv-meta">
+            <span>Riverside, CA</span>
+            <time>July 2023 – Aug. 2023</time>
+          </div>
         </header>
-        <p><time datetime="2023">2023</time></p>
         <ul>
-            <li>Created 5+ product reports daily using Python, Java, Javascript and created datasets based on product info</li>
-            <li>Presented visualizations weekly using Pandas and conducted weekly meetings with 5+ project managers</li>
-            <li>Preserved connections with 50+ businesses, improving satisfaction ratings and driving collaborative opportunities</li>
-            <li>Applied results from reports to lead the team on three successful projects, enhancing efficiency by 20%</li>
+          <li>Created 5+ product reports daily using Python, Java, JavaScript and created datasets based on product info</li>
+          <li>Presented visualizations weekly using Pandas and conducted weekly meetings with 5+ project managers</li>
+          <li>Preserved connections with 50+ businesses, improving satisfaction ratings and driving collaborative opportunities</li>
+          <li>Applied results from reports to lead the team on three successful projects, enhancing efficiency by 20%</li>
         </ul>
       </article>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Python, Java, JavaScript, SQL, R</li>
-        <li>PyTorch, Scikit-learn, pandas, NumPy</li>
-        <li>React, Node.js, Flask</li>
-        <li>Tableau, Git</li>
-      </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
+
       <article>
-        <h3><a href="../projects/">View my projects</a></h3>
+        <header>
+          <div>
+            <h3>Women's Volleyball Analytics</h3>
+            <p>Python, XGBoost, GBM, Scikit-learn, pandas</p>
+          </div>
+          <div class="cv-meta">
+            <time>Jan. 2026 – Present</time>
+          </div>
+        </header>
+        <ul>
+          <li>Building a win probability and sideout model using XGBoost/GBM on a multi-team flat-file dataset</li>
+          <li>Created features from pass quality and game context to predict outcomes with AUC-ROC and log loss evaluation</li>
+          <li>Integrating model outputs with a partner's RAPM presence model to produce a player +/- impact metric</li>
+          <li>Collaborating directly with coaching staff and athletes to validate findings and refine feature selection</li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <div>
+            <h3>Sentinel: School Safety App</h3>
+            <p>React, Firebase, Node.js, Claude API</p>
+          </div>
+          <div class="cv-meta">
+            <time>April 2026</time>
+          </div>
+        </header>
+        <ul>
+          <li>Developed a full-stack safety app using React and Firebase to manage real-time data during emergencies</li>
+          <li>Integrated an AI chatbot powered by a large language model to guide users to the fastest exit and get 911 contact</li>
+          <li>Implemented AI-generated incident reporting to produce actionable summaries for law enforcement response</li>
+          <li>Architected backend APIs and real-time database workflows enabling communication across the platform</li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <div>
+            <h3>Locked-In, Phone Jail Cell</h3>
+            <p>C++, Arduino IDE, Next.js, MongoDB</p>
+          </div>
+          <div class="cv-meta">
+            <time>Sep. 2025 – Dec. 2025</time>
+          </div>
+        </header>
+        <ul>
+          <li>Built a Next.js web application with MongoDB authentication to manage user logins, tasks, and session data</li>
+          <li>Programmed firmware in C++ (Arduino IDE) to command actions from the web app and control the lock/timer</li>
+          <li>Integrated full-stack software with embedded hardware to create a seamless, automated productivity system</li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <div>
+            <h3>Sports Research Writing Project</h3>
+            <p>Python, Pandas, Seaborn, Matplotlib</p>
+          </div>
+          <div class="cv-meta">
+            <time>June 2025 – Sep. 2025</time>
+          </div>
+        </header>
+        <ul>
+          <li>Analyzed a Kaggle NFL database to identify which offensive strategies correlated with historical team success</li>
+          <li>Determined whether run-heavy vs. pass-heavy teams achieved a higher win rate per season using statistical analysis</li>
+          <li>Utilized Python, Pandas, and Matplotlib to process data, analyze metrics, and create visualizations</li>
+          <li>Published findings on Medium concluding run-heavy teams had higher win rates, reaching 100+ readers</li>
+        </ul>
       </article>
     </section>
 
