@@ -124,6 +124,6 @@ document.body.insertAdjacentHTML(
   }
 
   export async function fetchGitHubData(username) {
-    return fetchJSON(`https://api.github.com/users/${shivamsharma0608}`);
+    return fetchJSON(`https://api.github.com/users/${'shivamsharma0608'}`);
   }
   
