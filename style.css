@@ -197,3 +197,25 @@ article header p {
   font-size: 80%;
   font-family: inherit;
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+#profile-stats dt {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: canvastext;
+  opacity: 0.6;
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+  grid-row: 2;
+}
