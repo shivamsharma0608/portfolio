@@ -2,73 +2,73 @@
     {
       "title": "Women's Volleyball Analytics",
       "year": "2026",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Built a win probability and sideout model using XGBoost/GBM on a multi-team flat-file dataset. Integrated model outputs with a partner's RAPM presence model to produce a player +/- impact metric."
     },
     {
       "title": "Sentinel: School Safety App",
       "year": "2026",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Full-stack safety app using React and Firebase to manage real-time data during emergencies. Integrated an AI chatbot powered by Claude API to guide users to the fastest exit and contact 911."
     },
     {
       "title": "Locked-In: Phone Jail Cell",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Built a Next.js web application with MongoDB authentication to manage user logins, tasks, and session data. Programmed firmware in C++ (Arduino IDE) to control the lock and timer from the web app."
     },
     {
       "title": "Sports Research Writing Project",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Analyzed a Kaggle NFL database to identify which offensive strategies correlated with historical team success. Published findings on Medium concluding run-heavy teams had higher win rates, reaching 100+ readers."
     },
     {
       "title": "Student Feedback NLP Pipeline",
       "year": "2026",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Engineered a Natural Language Processing pipeline using Python and PyTorch to analyze student feedback at Associated Students UCSD. Applied clustering algorithms via Scikit-learn to categorize demographics and uncover hidden correlations."
     },
     {
       "title": "Eclipse Analytics Sports Models",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Orchestrated Java and Python pipelines to transform raw sports stats into predictive growth analysis and visualizations. Published 10+ articles with 50+ visualizations integrating model-driven insights to substantiate analytical claims."
     },
     {
       "title": "ZIZO Tech Product Reports",
       "year": "2023",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Created 5+ product reports daily using Python, Java, and JavaScript at ZIZO Tech. Led the team on three successful projects enhancing efficiency by 20% using data-driven insights."
     },
     {
       "title": "NFL Offensive Strategy Analysis",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Determined whether run-heavy vs pass-heavy teams achieved higher win rates per season using statistical analysis. Utilized Python, Pandas, and Matplotlib to process data, analyze metrics, and create visualizations."
     },
     {
       "title": "Personal Portfolio Website",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Designed and built a personal portfolio website using HTML, CSS, and JavaScript. Implemented dynamic navigation, dark mode switching, and a better contact form with proper URL encoding."
     },
     {
       "title": "SQL Music Database",
       "year": "2025",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Built a SQLite database schema for Artists and Albums with edge case INSERT handling and JOIN queries. Explored relational database design and query optimization techniques."
     },
     {
       "title": "Real Estate Market Analysis",
       "year": "2024",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Conducted real estate market analysis covering capture rate, absorption rate, decision traps, and market segmentation frameworks. Applied econometric methods to evaluate market conditions and pricing strategies."
     },
     {
       "title": "UCSD Demographics Clustering",
       "year": "2026",
-      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Applied clustering algorithms via Scikit-learn to categorize student demographics and uncover hidden correlations in survey data. Developed dynamic statistical visualizations using Matplotlib and Seaborn to drive administrative insights."
     }
   ]
