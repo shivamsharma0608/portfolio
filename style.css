@@ -273,3 +273,14 @@ article header p {
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+.searchBar {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin-block: 1em;
+  font: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  background: canvas;
+  color: canvastext;
+}
