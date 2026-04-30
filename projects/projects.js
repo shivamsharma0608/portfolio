@@ -14,6 +14,19 @@ title.textContent = `Projects (${projects.length})`;
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 let selectedIndex = -1;
+let currentQuery = '';  // track search query globally
+
+// Apply both filters together
+function getFilteredProjects() {
+  return projects.filter((project) => {
+    let matchesSearch = Object.values(project)
+      .join('\n')
+      .toLowerCase()
+      .includes(currentQuery.toLowerCase());
+
+    return matchesSearch;
+  });
+}
 
 function renderPieChart(projectsGiven) {
   let svg = d3.select('#projects-pie-plot');
@@ -54,14 +67,15 @@ function renderPieChart(projectsGiven) {
             idx === selectedIndex ? 'legend-item selected' : 'legend-item'
           );
 
-        // Filter and render projects
+        // Apply BOTH filters
+        let searchFiltered = getFilteredProjects();
         if (selectedIndex === -1) {
-          renderProjects(projects, projectsContainer, 'h2');
+          renderProjects(searchFiltered, projectsContainer, 'h2');
         } else {
-          let filteredProjects = projects.filter(
+          let yearFiltered = searchFiltered.filter(
             (p) => p.year === newData[selectedIndex].label
           );
-          renderProjects(filteredProjects, projectsContainer, 'h2');
+          renderProjects(yearFiltered, projectsContainer, 'h2');
         }
       });
   });
@@ -84,14 +98,20 @@ renderPieChart(projects);
 // Search
 let searchInput = document.querySelector('.searchBar');
 searchInput.addEventListener('input', (event) => {
-  let query = event.target.value;
+  currentQuery = event.target.value;  // update global query
 
-  let filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-  });
+  let searchFiltered = getFilteredProjects();
 
-  selectedIndex = -1; // reset selection on new search
-  renderProjects(filteredProjects, projectsContainer, 'h2');
-  renderPieChart(filteredProjects);
+  // Pie chart updates to reflect only search-filtered projects
+  renderPieChart(searchFiltered);
+
+  // Apply year filter on top of search filter if a wedge is selected
+  if (selectedIndex === -1) {
+    renderProjects(searchFiltered, projectsContainer, 'h2');
+  } else {
+    // selectedIndex may be out of bounds after search narrows data
+    // so reset it safely
+    selectedIndex = -1;
+    renderProjects(searchFiltered, projectsContainer, 'h2');
+  }
 });
