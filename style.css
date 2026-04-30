@@ -235,14 +235,15 @@ article header p {
 
 #projects-pie-plot {
   max-width: 20em;
-  flex-shrink: 0;  
+  flex-shrink: 0;
   overflow: visible;
-  margin-block: 0;  
+  margin-block: 0;
 }
 
 .chart-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2em;
   margin-block: 1em;
 }
