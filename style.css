@@ -74,7 +74,7 @@ button {
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;  /* was span 3, now span 4 to accommodate year */
 }
 
 .projects article h2 {
@@ -218,4 +218,17 @@ article header p {
   font-weight: bold;
   margin: 0;
   grid-row: 2;
+}
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: canvastext;
+  opacity: 0.6;
+  font-style: italic;
+  margin: 0;
+}
+
+.project-info {
+  display: contents;
 }
