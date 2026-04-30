@@ -13,14 +13,13 @@ title.textContent = `Projects (${projects.length})`;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+let selectedIndex = -1;
 
 function renderPieChart(projectsGiven) {
-  // Clear existing paths and legend
   let svg = d3.select('#projects-pie-plot');
   svg.selectAll('path').remove();
   d3.select('.legend').selectAll('li').remove();
 
-  // Recalculate data
   let newRolledData = d3.rollups(
     projectsGiven,
     (v) => v.length,
@@ -31,24 +30,48 @@ function renderPieChart(projectsGiven) {
     return { value: count, label: year };
   });
 
-  // Recalculate arcs
   let newSliceGenerator = d3.pie().value((d) => d.value);
   let newArcData = newSliceGenerator(newData);
   let newArcs = newArcData.map((d) => arcGenerator(d));
 
-  // Draw paths
-  newArcs.forEach((arc, idx) => {
-    svg.append('path')
+  newArcs.forEach((arc, i) => {
+    svg
+      .append('path')
       .attr('d', arc)
-      .attr('fill', colors(idx));
+      .attr('fill', colors(i))
+      .on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        // Update wedge classes
+        svg
+          .selectAll('path')
+          .attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+        // Update legend classes
+        d3.select('.legend')
+          .selectAll('li')
+          .attr('class', (_, idx) =>
+            idx === selectedIndex ? 'legend-item selected' : 'legend-item'
+          );
+
+        // Filter and render projects
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2');
+        } else {
+          let filteredProjects = projects.filter(
+            (p) => p.year === newData[selectedIndex].label
+          );
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 
   // Draw legend
   let legend = d3.select('.legend');
-  newData.forEach((d, idx) => {
+  newData.forEach((d, i) => {
     legend
       .append('li')
-      .attr('style', `--color:${colors(idx)}`)
+      .attr('style', `--color:${colors(i)}`)
       .attr('class', 'legend-item')
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
   });
@@ -68,6 +91,7 @@ searchInput.addEventListener('input', (event) => {
     return values.includes(query.toLowerCase());
   });
 
+  selectedIndex = -1; // reset selection on new search
   renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);
 });
