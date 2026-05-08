@@ -305,13 +305,19 @@ article header p {
 
 /* Stats dl */
 .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-  gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
   padding: 1em;
   border: 1px solid var(--border-color);
   border-radius: 0.5em;
   margin-block: 1em;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  min-width: 8em;
 }
 
 .stats dt {

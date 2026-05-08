@@ -43,32 +43,33 @@ function processCommits(data) {
 
 // Render summary stats
 function renderCommitInfo(data, commits) {
-  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
-
-  dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
-  dl.append('dd').text(data.length);
-
-  dl.append('dt').text('Total commits');
-  dl.append('dd').text(commits.length);
-
-  dl.append('dt').text('Number of files');
-  dl.append('dd').text(d3.group(data, (d) => d.file).size);
-
-  dl.append('dt').text('Max file length');
-  dl.append('dd').text(d3.max(data, (d) => d.line));
-
-  dl.append('dt').text('Average line length');
-  dl.append('dd').text(Math.round(d3.mean(data, (d) => d.length)));
-
-  const workByPeriod = d3.rollups(
-    data,
-    (v) => v.length,
-    (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' })
-  );
-  const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0];
-  dl.append('dt').text('Most active time');
-  dl.append('dd').text(maxPeriod);
-}
+    const container = d3.select('#stats');
+  
+    const stats = [
+      { label: 'Total LOC', value: data.length },
+      { label: 'Total Commits', value: commits.length },
+      { label: 'Number of Files', value: d3.group(data, (d) => d.file).size },
+      { label: 'Max File Length', value: d3.max(data, (d) => d.line) },
+      { label: 'Average Line Length', value: Math.round(d3.mean(data, (d) => d.length)) },
+      { label: 'Most Active Time', value: (() => {
+          const workByPeriod = d3.rollups(
+            data,
+            (v) => v.length,
+            (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' })
+          );
+          return d3.greatest(workByPeriod, (d) => d[1])?.[0];
+        })()
+      },
+    ];
+  
+    const dl = container.append('dl').attr('class', 'stats');
+  
+    stats.forEach(({ label, value }) => {
+      const div = dl.append('div');
+      div.append('dt').text(label);
+      div.append('dd').text(value);
+    });
+  }
 
 // Tooltip functions
 function renderTooltipContent(commit) {
