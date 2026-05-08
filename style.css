@@ -405,7 +405,7 @@ circle.selected {
 #language-breakdown {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-  gap: 0.5em 1.5em;
+  gap: 0.25em 1.5em;
   padding: 1em;
   border: 1px solid var(--border-color);
   border-radius: 0.5em;
@@ -413,11 +413,11 @@ circle.selected {
 }
 
 #language-breakdown dt {
-  font-size: 0.75em;
+  font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.6;
-  grid-row: odd;
+  order: -1;
 }
 
 #language-breakdown dd {
