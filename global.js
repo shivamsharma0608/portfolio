@@ -17,13 +17,14 @@ const BASE_PATH = (location.hostname === "localhost" || location.hostname === "1
   ? "/"
   : "/portfolio/";
 
-let pages = [
-  { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'cv/', title: 'CV' },
-  { url: 'contact/', title: 'Contact' },
-  { url: 'https://github.com/shivamsharma0608', title: 'GitHub' },
-];
+  let pages = [
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'cv/', title: 'CV' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'meta/', title: 'Meta' },        // add this
+    { url: 'https://github.com/shivamsharma0608', title: 'GitHub' },
+  ];
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -129,4 +130,6 @@ document.body.insertAdjacentHTML(
   export async function fetchGitHubData(username) {
     return fetchJSON(`https://api.github.com/users/${'shivamsharma0608'}`);
   }
+
+  
   

@@ -302,3 +302,102 @@ article header p {
 .selected:is(path) {
   fill: var(--color);
 }
+
+/* Stats dl */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  margin-block: 1em;
+}
+
+.stats dt {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.stats dd {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Tooltip */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  opacity: 0.6;
+  font-size: 0.85em;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: bold;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  position: fixed;
+  background: color-mix(in oklch, canvas, transparent 15%);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px oklch(0% 0 0 / 20%);
+  border-radius: 0.5em;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  z-index: 100;
+}
+
+/* Dots */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+/* Gridlines */
+.gridlines line {
+  stroke: currentColor;
+  opacity: 0.15;
+}
+
+.gridlines path {
+  display: none;
+}
+
+/* Brush selection */
+@keyframes marching-ants {
+  to { stroke-dashoffset: -8; }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
