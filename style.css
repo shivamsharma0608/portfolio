@@ -401,3 +401,27 @@ circle.selected {
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
 }
+
+#language-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  gap: 0.5em 1.5em;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  margin-block: 1em;
+}
+
+#language-breakdown dt {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  grid-row: odd;
+}
+
+#language-breakdown dd {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
