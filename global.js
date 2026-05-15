@@ -121,6 +121,7 @@ document.body.insertAdjacentHTML(
         <div class="project-info">
           <p>${project.description}</p>
           <p class="project-year">${project.year}</p>
+          ${project.url ? `<a href="${project.url}" target="_blank">View Project →</a>` : ''}
         </div>
       `;
       containerElement.appendChild(article);

@@ -70,5 +70,12 @@
       "year": "2026",
       "image": "https://dsc106.com/labs/lab02/images/empty.svg",
       "description": "Applied clustering algorithms via Scikit-learn to categorize student demographics and uncover hidden correlations in survey data. Developed dynamic statistical visualizations using Matplotlib and Seaborn to drive administrative insights."
+    },
+    {
+      "title": "Bikewatching",
+      "year": "2026",
+      "image": "images/bikewatching.png",
+      "url": "https://shivamsharma0608.github.io/bikewatching/",
+      "description": "Interactive map visualization of BlueBike station traffic in the Boston area. Built with Mapbox GL JS and D3, showing bike lane data, station traffic volume, and arrival/departure flow with a time-of-day filter."
     }
   ]
